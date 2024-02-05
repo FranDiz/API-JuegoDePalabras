@@ -7,9 +7,9 @@ import java.util.Optional;
 
 public interface JuegoServicio {
     List<Juego> findAll();
-    Optional<Juego> findById(Long id);
+    Optional<Juego> findById(Long id_juego);
     Juego save(Juego juego);
-    void deleteById(Long id);
-    boolean existsById(Long id);
+    void deleteById(Long id_juego);
+    boolean existsById(Long id_juego);
 
 }

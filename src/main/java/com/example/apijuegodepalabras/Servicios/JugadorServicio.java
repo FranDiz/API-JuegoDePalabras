@@ -7,13 +7,15 @@ import java.util.Optional;
 
 public interface JugadorServicio {
     List<Jugador> findAll();
-    Optional<Jugador> findById(Long id);
+    Optional<Jugador> findById(Long jugador_id);
     Jugador save(Jugador jugador);
-    void deleteById(Long id);
-    boolean existsById(Long id);
+    void deleteById(Long jugador_id);
+
+    void getId(Long jugador_id);
+    boolean existsById(Long juador_id);
 
     List<Jugador> findByEquipo(Equipo equipo);
-    List<Jugador> obtenerJugadoresPorEquipo(Long id_equipo);
+    List<Jugador> obtenerJugadoresPorEquipo(Long equipo_id);
 
-    List<Jugador> findByEquipoId(Long id);
+    List<Jugador> findByEquipoId(Long equipo_id);
 }
