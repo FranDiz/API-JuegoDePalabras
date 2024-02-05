@@ -20,5 +20,18 @@ public class Equipo {
     private Integer puntuacion;
 
     @OneToMany(mappedBy = "equipo", cascade = CascadeType.ALL)
+
     private List<Jugador> jugadores;
+    public Long getId() {
+        return equipo_id;
+    }
+    public void setId(Long equipo_id) {
+        this.equipo_id = equipo_id;
+    }
+    public String getName() {
+        return nombre;
+    }
+    public void setName(String nombre) {
+        this.nombre = nombre;
+    }
 }

@@ -14,11 +14,24 @@ public class Juego {
     private Long id_juego;
 
     @Enumerated(EnumType.STRING)
-    private Dificultad dificultad;
+    private String dificultad;
 
     private String descripcion;
     private Integer intentos;
 
     @OneToMany(mappedBy = "juego", cascade = CascadeType.ALL)
     private List<Palabra> palabras;
+
+    public String getDificultadjuego() {
+        return dificultad;
+    }
+    public void setDificultadjuego(String dificultad){
+        this.dificultad = dificultad;
+    }
+    public int getIntentosDificultad() {
+        return intentos;
+    }
+    public void setIntentosDificultad(int intentos) {
+        this.intentos = intentos;
+    }
 }
