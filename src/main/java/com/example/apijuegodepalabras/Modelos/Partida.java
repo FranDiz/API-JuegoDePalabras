@@ -23,4 +23,27 @@ public class Partida {
     @ManyToOne
     @JoinColumn(name="juego_id")
     private Juego juego_id;
+    public LocalDateTime getStartTime() {
+        return inicio;
+    }
+
+    public void setStartTime(LocalDateTime inicio) {
+        this.inicio = inicio;
+    }
+
+    public LocalDateTime getEndTime() {
+        return fin;
+    }
+
+    public void setEndTime(LocalDateTime fin) {
+        this.fin = fin;
+    }
+
+    public String getPalabraRonda() {
+        return palabra_ronda;
+    }
+
+    public void setPalabraRonda(String palabra_ronda) {
+        this.palabra_ronda = palabra_ronda;
+    }
 }
